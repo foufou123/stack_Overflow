@@ -1,0 +1,18 @@
+<%= form_for @response do |f| %>
+<% if @response.errors.any? %>
+  <div class="error_messages">
+    <h2 class="error">Form is invaid</h2>
+    <ul>
+      <% @response.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="form-group">
+  <%= f.label :response %></br>
+  <%=f.text_area :response, size: "20x10"%>
+</div>
+<%= f.submit("Post Reply", :class => "btn btn-default") %>
+<% end %>

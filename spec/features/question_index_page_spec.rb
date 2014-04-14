@@ -14,6 +14,7 @@ describe Question do
     fill_in 'Question', :with => 'Who is the best action star?'
     click_button 'Submit'
     page.should have_content 'Favorite action star'
-
  end
+
+
 end

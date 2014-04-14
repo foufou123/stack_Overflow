@@ -1,1 +1,6 @@
-<h2><% @question.title %></h2>
+<h2><%= @question.title %></h2>
+
+
+<p class="thread"><%= @question.question %></p>
+
+<%= render './responses/form' %>

@@ -9,4 +9,8 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :current_user
+
+  def authorize
+    redirect_to "/questions", alert: "Not authorized" if current_user.nil?
+  end
 end
